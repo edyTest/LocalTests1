@@ -1,0 +1,14 @@
+
+k
+java:S1104"PMake cast a static final constant or non-public and provide accessors if needed.(£¹¸ûÿÿÿÿ
+o
+java:S1104"TMake movie_id a static final constant or non-public and provide accessors if needed.(âÎ îûÿÿÿÿ
+f
+java:S1104"PMake name a static final constant or non-public and provide accessors if needed.( şÍ¾
+m
+java:S1104"XMake release_date a static final constant or non-public and provide accessors if needed.(¬¡¤8
+f
+java:S1104"PMake year a static final constant or non-public and provide accessors if needed.(•µ‰¹
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(îƒ
+m	java:S116"SRename this field "movie_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âÎ îûÿÿÿÿ
+k	java:S116"WRename this field "release_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬¡¤8
