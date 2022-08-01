@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class org.GroupWireMockTest.service.MovieRestClientTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class org.GroupWireMockTest.service.MovieRestClientTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.GroupWireMockTest.service.html">org.GroupWireMockTest.service</a> &gt; MovieRestClientTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.901s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">retrieveAllMovies</td>
+<td class="success">1.901s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2022-07-28 18:49:07.621 Verbose logging enabled
+Base URL::http://localhost:8083/
+2022-07-28 18:49:09.357 Admin request received:
+127.0.0.1 - POST /mappings
+
+Connection: [keep-alive]
+User-Agent: [Apache-HttpClient/4.5.6 (Java/1.8.0_333)]
+Host: [localhost:8083]
+Content-Length: [231]
+Content-Type: [text/plain; charset=UTF-8]
+{
+  &quot;id&quot; : &quot;c4e8b4cc-767b-4d89-a038-0e9dfe7eec91&quot;,
+  &quot;request&quot; : {
+    &quot;method&quot; : &quot;ANY&quot;
+  },
+  &quot;response&quot; : {
+    &quot;status&quot; : 200,
+    &quot;proxyBaseUrl&quot; : &quot;http://localhost:8081&quot;
+  },
+  &quot;uuid&quot; : &quot;c4e8b4cc-767b-4d89-a038-0e9dfe7eec91&quot;
+}
+
+2022-07-28 18:49:09.544 Admin request received:
+127.0.0.1 - POST /mappings
+
+Connection: [keep-alive]
+User-Agent: [Apache-HttpClient/4.5.6 (Java/1.8.0_333)]
+Host: [localhost:8083]
+Content-Length: [292]
+Content-Type: [text/plain; charset=UTF-8]
+{
+  &quot;id&quot; : &quot;b7a1d8fe-56c6-48ea-9df3-9c73638f771d&quot;,
+  &quot;request&quot; : {
+    &quot;method&quot; : &quot;GET&quot;
+  },
+  &quot;response&quot; : {
+    &quot;status&quot; : 200,
+    &quot;bodyFileName&quot; : &quot;all-movies.json&quot;,
+    &quot;headers&quot; : {
+      &quot;Content-Type&quot; : &quot;application/json&quot;
+    }
+  },
+  &quot;uuid&quot; : &quot;b7a1d8fe-56c6-48ea-9df3-9c73638f771d&quot;
+}
+
+2022-07-28 18:49:10.264 Request received:
+127.0.0.1 - GET /movieservice/v1/allMovies
+
+Accept: [*/*]
+User-Agent: [ReactorNetty/0.8.9.RELEASE]
+Host: [localhost:8083]
+Accept-Encoding: [gzip]
+
+
+
+Matched response definition:
+{
+  &quot;status&quot; : 200,
+  &quot;body&quot; : &quot;[\n  {\n    \&quot;movie_id\&quot;: 1,\n    \&quot;name\&quot;: \&quot;Batman Begins\&quot;,\n    \&quot;year\&quot;: 2005,\n    \&quot;cast\&quot;: \&quot;Christian Bale, Katie Holmes , Liam Neeson\&quot;,\n    \&quot;release_date\&quot;: \&quot;2005-06-15\&quot;\n  },\n  {\n    \&quot;movie_id\&quot;: 2,\n    \&quot;name\&quot;: \&quot;Dark Knight\&quot;,\n    \&quot;year\&quot;: 2008,\n    \&quot;cast\&quot;: \&quot;Christian Bale, Heath Ledger , Michael Caine\&quot;,\n    \&quot;release_date\&quot;: \&quot;2008-07-18\&quot;\n  },\n  {\n    \&quot;movie_id\&quot;: 3,\n    \&quot;name\&quot;: \&quot;The Dark Knight Rises\&quot;,\n    \&quot;year\&quot;: 2012,\n    \&quot;cast\&quot;: \&quot;Christian Bale, Heath Ledger , Michael Caine\&quot;,\n    \&quot;release_date\&quot;: \&quot;2012-07-20\&quot;\n  },\n  {\n    \&quot;movie_id\&quot;: 4,\n    \&quot;name\&quot;: \&quot;The Avengers\&quot;,\n    \&quot;year\&quot;: 2012,\n    \&quot;cast\&quot;: \&quot;Robert Downey Jr, Chris Evans , Chris HemsWorth\&quot;,\n    \&quot;release_date\&quot;: \&quot;2012-05-04\&quot;\n  },\n  {\n    \&quot;movie_id\&quot;: 5,\n    \&quot;name\&quot;: \&quot;Avengers: Age of Ultron\&quot;,\n    \&quot;year\&quot;: 2015,\n    \&quot;cast\&quot;: \&quot;Robert Downey Jr, Chris Evans , Chris HemsWorth\&quot;,\n    \&quot;release_date\&quot;: \&quot;2015-05-01\&quot;\n  },\n  {\n    \&quot;movie_id\&quot;: 6,\n    \&quot;name\&quot;: \&quot;Avengers: Infinity War\&quot;,\n    \&quot;year\&quot;: 2018,\n    \&quot;cast\&quot;: \&quot;Robert Downey Jr, Chris Evans , Chris HemsWorth\&quot;,\n    \&quot;release_date\&quot;: \&quot;2018-04-27\&quot;\n  },\n  {\n    \&quot;movie_id\&quot;: 7,\n    \&quot;name\&quot;: \&quot;Avengers: End Game\&quot;,\n    \&quot;year\&quot;: 2019,\n    \&quot;cast\&quot;: \&quot;Robert Downey Jr, Chris Evans , Chris HemsWorth\&quot;,\n    \&quot;release_date\&quot;: \&quot;2019-04-26\&quot;\n  },\n  {\n    \&quot;movie_id\&quot;: 8,\n    \&quot;name\&quot;: \&quot;The Hangover\&quot;,\n    \&quot;year\&quot;: 2009,\n    \&quot;cast\&quot;: \&quot;Bradley Cooper, Ed Helms , Zach Galifianakis\&quot;,\n    \&quot;release_date\&quot;: \&quot;2009-06-05\&quot;\n  },\n  {\n    \&quot;movie_id\&quot;: 9,\n    \&quot;name\&quot;: \&quot;The Imitation Game\&quot;,\n    \&quot;year\&quot;: 2014,\n    \&quot;cast\&quot;: \&quot;Benedict Cumberbatch, Keira Knightley\&quot;,\n    \&quot;release_date\&quot;: \&quot;2014-12-25\&quot;\n  },\n  {\n    \&quot;movie_id\&quot;: 10,\n    \&quot;name\&quot;: \&quot;The Departed\&quot;,\n    \&quot;year\&quot;: 2006,\n    \&quot;cast\&quot;: \&quot;Leonardo DiCaprio, Matt Damon , Mark Wahlberg\&quot;,\n    \&quot;release_date\&quot;: \&quot;2006-10-06\&quot;\n  }\n]&quot;,
+  &quot;bodyFileName&quot; : &quot;all-movies.json&quot;,
+  &quot;headers&quot; : {
+    &quot;Content-Type&quot; : &quot;application/json&quot;
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [b7a1d8fe-56c6-48ea-9df3-9c73638f771d]
+
+
+Movie List: [Movie(cast=Christian Bale, Katie Holmes , Liam Neeson, movie_id=1, name=Batman Begins, release_date=2005-06-15, year=2005), Movie(cast=Christian Bale, Heath Ledger , Michael Caine, movie_id=2, name=Dark Knight, release_date=2008-07-18, year=2008), Movie(cast=Christian Bale, Heath Ledger , Michael Caine, movie_id=3, name=The Dark Knight Rises, release_date=2012-07-20, year=2012), Movie(cast=Robert Downey Jr, Chris Evans , Chris HemsWorth, movie_id=4, name=The Avengers, release_date=2012-05-04, year=2012), Movie(cast=Robert Downey Jr, Chris Evans , Chris HemsWorth, movie_id=5, name=Avengers: Age of Ultron, release_date=2015-05-01, year=2015), Movie(cast=Robert Downey Jr, Chris Evans , Chris HemsWorth, movie_id=6, name=Avengers: Infinity War, release_date=2018-04-27, year=2018), Movie(cast=Robert Downey Jr, Chris Evans , Chris HemsWorth, movie_id=7, name=Avengers: End Game, release_date=2019-04-26, year=2019), Movie(cast=Bradley Cooper, Ed Helms , Zach Galifianakis, movie_id=8, name=The Hangover, release_date=2009-06-05, year=2009), Movie(cast=Benedict Cumberbatch, Keira Knightley, movie_id=9, name=The Imitation Game, release_date=2014-12-25, year=2014), Movie(cast=Leonardo DiCaprio, Matt Damon , Mark Wahlberg, movie_id=10, name=The Departed, release_date=2006-10-06, year=2006)]</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO wiremock.org.eclipse.jetty.util.log - Logging initialized @1488ms to wiremock.org.eclipse.jetty.util.log.Slf4jLog
+[Test worker] INFO wiremock.org.eclipse.jetty.server.Server - jetty-9.4.z-SNAPSHOT; built: 2019-06-10T16:30:51.723Z; git: afcf563148970e98786327af5e07c261fda175d3; jvm 1.8.0_333-b02
+[Test worker] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler - Started w.o.e.j.s.ServletContextHandler@5143c662{/__admin,null,AVAILABLE}
+[Test worker] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler - Started w.o.e.j.s.ServletContextHandler@71c27ee8{/,null,AVAILABLE}
+[Test worker] INFO wiremock.org.eclipse.jetty.server.AbstractConnector - Started NetworkTrafficServerConnector@3ddc6915{HTTP/1.1,[http/1.1]}{0.0.0.0:8083}
+[Test worker] INFO wiremock.org.eclipse.jetty.server.Server - Started @1772ms
+[qtp1962329560-20] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler.__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+[qtp1962329560-14] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler.ROOT - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+[Test worker] INFO wiremock.org.eclipse.jetty.server.AbstractConnector - Stopped NetworkTrafficServerConnector@3ddc6915{HTTP/1.1,[http/1.1]}{0.0.0.0:8083}
+[Test worker] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler - Stopped w.o.e.j.s.ServletContextHandler@71c27ee8{/,null,UNAVAILABLE}
+[Test worker] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler - Stopped w.o.e.j.s.ServletContextHandler@5143c662{/__admin,null,UNAVAILABLE}
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at 28-jul-2022 18:49:10</p>
+</div>
+</div>
+</body>
+</html>

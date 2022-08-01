@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.GroupWireMockTest.service.MovieRestClientTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-28T23:49:08" hostname="MacBook-Air-de-Eduardo.local" time="1.901">
+  <properties/>
+  <testcase name="retrieveAllMovies" classname="org.GroupWireMockTest.service.MovieRestClientTest" time="1.901"/>
+  <system-out><![CDATA[2022-07-28 18:49:07.621 Verbose logging enabled
+Base URL::http://localhost:8083/
+2022-07-28 18:49:09.357 Admin request received:
+127.0.0.1 - POST /mappings
+
+Connection: [keep-alive]
+User-Agent: [Apache-HttpClient/4.5.6 (Java/1.8.0_333)]
+Host: [localhost:8083]
+Content-Length: [231]
+Content-Type: [text/plain; charset=UTF-8]
+{
+  "id" : "c4e8b4cc-767b-4d89-a038-0e9dfe7eec91",
+  "request" : {
+    "method" : "ANY"
+  },
+  "response" : {
+    "status" : 200,
+    "proxyBaseUrl" : "http://localhost:8081"
+  },
+  "uuid" : "c4e8b4cc-767b-4d89-a038-0e9dfe7eec91"
+}
+
+2022-07-28 18:49:09.544 Admin request received:
+127.0.0.1 - POST /mappings
+
+Connection: [keep-alive]
+User-Agent: [Apache-HttpClient/4.5.6 (Java/1.8.0_333)]
+Host: [localhost:8083]
+Content-Length: [292]
+Content-Type: [text/plain; charset=UTF-8]
+{
+  "id" : "b7a1d8fe-56c6-48ea-9df3-9c73638f771d",
+  "request" : {
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "all-movies.json",
+    "headers" : {
+      "Content-Type" : "application/json"
+    }
+  },
+  "uuid" : "b7a1d8fe-56c6-48ea-9df3-9c73638f771d"
+}
+
+2022-07-28 18:49:10.264 Request received:
+127.0.0.1 - GET /movieservice/v1/allMovies
+
+Accept: [*/*]
+User-Agent: [ReactorNetty/0.8.9.RELEASE]
+Host: [localhost:8083]
+Accept-Encoding: [gzip]
+
+
+
+Matched response definition:
+{
+  "status" : 200,
+  "body" : "[\n  {\n    \"movie_id\": 1,\n    \"name\": \"Batman Begins\",\n    \"year\": 2005,\n    \"cast\": \"Christian Bale, Katie Holmes , Liam Neeson\",\n    \"release_date\": \"2005-06-15\"\n  },\n  {\n    \"movie_id\": 2,\n    \"name\": \"Dark Knight\",\n    \"year\": 2008,\n    \"cast\": \"Christian Bale, Heath Ledger , Michael Caine\",\n    \"release_date\": \"2008-07-18\"\n  },\n  {\n    \"movie_id\": 3,\n    \"name\": \"The Dark Knight Rises\",\n    \"year\": 2012,\n    \"cast\": \"Christian Bale, Heath Ledger , Michael Caine\",\n    \"release_date\": \"2012-07-20\"\n  },\n  {\n    \"movie_id\": 4,\n    \"name\": \"The Avengers\",\n    \"year\": 2012,\n    \"cast\": \"Robert Downey Jr, Chris Evans , Chris HemsWorth\",\n    \"release_date\": \"2012-05-04\"\n  },\n  {\n    \"movie_id\": 5,\n    \"name\": \"Avengers: Age of Ultron\",\n    \"year\": 2015,\n    \"cast\": \"Robert Downey Jr, Chris Evans , Chris HemsWorth\",\n    \"release_date\": \"2015-05-01\"\n  },\n  {\n    \"movie_id\": 6,\n    \"name\": \"Avengers: Infinity War\",\n    \"year\": 2018,\n    \"cast\": \"Robert Downey Jr, Chris Evans , Chris HemsWorth\",\n    \"release_date\": \"2018-04-27\"\n  },\n  {\n    \"movie_id\": 7,\n    \"name\": \"Avengers: End Game\",\n    \"year\": 2019,\n    \"cast\": \"Robert Downey Jr, Chris Evans , Chris HemsWorth\",\n    \"release_date\": \"2019-04-26\"\n  },\n  {\n    \"movie_id\": 8,\n    \"name\": \"The Hangover\",\n    \"year\": 2009,\n    \"cast\": \"Bradley Cooper, Ed Helms , Zach Galifianakis\",\n    \"release_date\": \"2009-06-05\"\n  },\n  {\n    \"movie_id\": 9,\n    \"name\": \"The Imitation Game\",\n    \"year\": 2014,\n    \"cast\": \"Benedict Cumberbatch, Keira Knightley\",\n    \"release_date\": \"2014-12-25\"\n  },\n  {\n    \"movie_id\": 10,\n    \"name\": \"The Departed\",\n    \"year\": 2006,\n    \"cast\": \"Leonardo DiCaprio, Matt Damon , Mark Wahlberg\",\n    \"release_date\": \"2006-10-06\"\n  }\n]",
+  "bodyFileName" : "all-movies.json",
+  "headers" : {
+    "Content-Type" : "application/json"
+  }
+}
+
+Response:
+HTTP/1.1 200
+Content-Type: [application/json]
+Matched-Stub-Id: [b7a1d8fe-56c6-48ea-9df3-9c73638f771d]
+
+
+Movie List: [Movie(cast=Christian Bale, Katie Holmes , Liam Neeson, movie_id=1, name=Batman Begins, release_date=2005-06-15, year=2005), Movie(cast=Christian Bale, Heath Ledger , Michael Caine, movie_id=2, name=Dark Knight, release_date=2008-07-18, year=2008), Movie(cast=Christian Bale, Heath Ledger , Michael Caine, movie_id=3, name=The Dark Knight Rises, release_date=2012-07-20, year=2012), Movie(cast=Robert Downey Jr, Chris Evans , Chris HemsWorth, movie_id=4, name=The Avengers, release_date=2012-05-04, year=2012), Movie(cast=Robert Downey Jr, Chris Evans , Chris HemsWorth, movie_id=5, name=Avengers: Age of Ultron, release_date=2015-05-01, year=2015), Movie(cast=Robert Downey Jr, Chris Evans , Chris HemsWorth, movie_id=6, name=Avengers: Infinity War, release_date=2018-04-27, year=2018), Movie(cast=Robert Downey Jr, Chris Evans , Chris HemsWorth, movie_id=7, name=Avengers: End Game, release_date=2019-04-26, year=2019), Movie(cast=Bradley Cooper, Ed Helms , Zach Galifianakis, movie_id=8, name=The Hangover, release_date=2009-06-05, year=2009), Movie(cast=Benedict Cumberbatch, Keira Knightley, movie_id=9, name=The Imitation Game, release_date=2014-12-25, year=2014), Movie(cast=Leonardo DiCaprio, Matt Damon , Mark Wahlberg, movie_id=10, name=The Departed, release_date=2006-10-06, year=2006)]]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO wiremock.org.eclipse.jetty.util.log - Logging initialized @1488ms to wiremock.org.eclipse.jetty.util.log.Slf4jLog
+[Test worker] INFO wiremock.org.eclipse.jetty.server.Server - jetty-9.4.z-SNAPSHOT; built: 2019-06-10T16:30:51.723Z; git: afcf563148970e98786327af5e07c261fda175d3; jvm 1.8.0_333-b02
+[Test worker] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler - Started w.o.e.j.s.ServletContextHandler@5143c662{/__admin,null,AVAILABLE}
+[Test worker] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler - Started w.o.e.j.s.ServletContextHandler@71c27ee8{/,null,AVAILABLE}
+[Test worker] INFO wiremock.org.eclipse.jetty.server.AbstractConnector - Started NetworkTrafficServerConnector@3ddc6915{HTTP/1.1,[http/1.1]}{0.0.0.0:8083}
+[Test worker] INFO wiremock.org.eclipse.jetty.server.Server - Started @1772ms
+[qtp1962329560-20] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler.__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normalized mapped under returned 'null'
+[qtp1962329560-14] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler.ROOT - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+[Test worker] INFO wiremock.org.eclipse.jetty.server.AbstractConnector - Stopped NetworkTrafficServerConnector@3ddc6915{HTTP/1.1,[http/1.1]}{0.0.0.0:8083}
+[Test worker] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler - Stopped w.o.e.j.s.ServletContextHandler@71c27ee8{/,null,UNAVAILABLE}
+[Test worker] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler - Stopped w.o.e.j.s.ServletContextHandler@5143c662{/__admin,null,UNAVAILABLE}
+]]></system-err>
+</testsuite>

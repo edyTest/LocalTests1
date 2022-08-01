@@ -8,11 +8,11 @@ sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
+    maven {url "https://jitpack.io"}
+    maven {url "https://repository.mulesoft.org/nexus/content/repositories/public/"}
 }
 
-test{
-    useJUnitPlatform()
-}
+
 
 dependencies {
     //webclient-dependencies
@@ -24,14 +24,20 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.8'
     annotationProcessor 'org.projectlombok:lombok:1.18.8'
     implementation 'org.slf4j:slf4j-api:1.7.26'
-    implementation 'org.slf4j:slf4j-simple:1.7.26'
+    implementation 'org.slf4j:slf4j-simple:1.7.30'
+
 
     //jackson
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.9'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.9'
     implementation 'com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.9'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
 
-    //junit5-dependencies
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.5.1")
+
+    //junit4-dependencies
+    testImplementation "com.github.tomakehurst:wiremock-jre8-standalone:2.24.1"
+    testImplementation "junit:junit:4.12"
+
+
 }
