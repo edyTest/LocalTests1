@@ -1,0 +1,59 @@
+lab troubleshoot-review start
+
+1 source /usr/local/etc/ocp4.config
+2 git branch
+4 login openshift
+5 create new project named youruser-nodejs-app
+6 create new app names nodejs-dev
+	6.1
+	--name nodejs
+	https://github.com/..GITHUB_USER../DO180-apps#troubleshoot-review
+	-i nodejs:16... --context-dir=... --build-ev
+	npm_config_registry=http://...NEXUS_SERVER../repository/nodejs
+	6.2
+	log nodejs-dev
+	6.3
+	get pods
+7 update version of express in the package.json
+	7.1 
+	cd nodejs-app
+	sed ../4.20/4.x/ ...
+	7.2
+	cat ...
+	7.3
+	comit "Fixed Express release"
+	push
+8 Rebuild app
+	start-buil ...nodejs-dev
+	logs .. nodejs-dev
+9 Verify application runnin error
+	pods
+	logs .. deployment/nodejs-dev
+10 update module named http-error to html-errors in server.js
+	sed .../http-error/html-error/ server.js
+	cat
+	commit "Fixed module typo"
+	push
+	start-build ... nodejs-dev
+	logs nodejs-dev
+	pods
+11 create a route for the application and test access
+	expose nodejs-dev
+	get route
+	logs deployment/nodejs-dev
+12 replace process.environment to process.env in file server.js
+	sed ... 's/process.environment/process.env/ ' server.js
+	cat
+	commit "Fixed process.env"
+	push
+	start-build ... nodejs-dev
+	logs nodejs-dev
+	pods
+	curl \
+	nodejs-dev-....DEV_USER...-nodejs-app.$...WILDCARD_DOMAIN}
+13 change to the /home/student directory
+	cd
+
+
+lab troubleshoot-review grade
+lab troubleshoot-review finish
